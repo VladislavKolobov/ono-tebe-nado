@@ -182,12 +182,9 @@ li {
 
 .lots__card-list-item {
   position: relative;
-  width: 430px;
 }
 
 .card-link {
-  display: block;
-  height: 450px;
   text-decoration: none;
 }
 
@@ -196,7 +193,9 @@ li {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  height: 450px;
+  justify-content: space-between;
+  max-width: 430px;
+  min-height: 450px;
   padding: 50px 40px;
 }
 
@@ -211,15 +210,13 @@ li {
 }
 
 .card__text {
-  display: flex;
-  flex-wrap: ;
   color: #fff;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
   line-height: 120%;
-
 }
+
 .lots__look-more-link {
   padding-top: 30px;
   padding-left: 40px;
@@ -232,32 +229,67 @@ li {
 
 .about {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 430px auto;
+  grid-template-rows: 487px;
+  justify-items: center;
+  gap: 25px;
+  padding: 0 50px 180px 50px;
 }
 
 .about__logo {
-  width: 240px;
-  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 240px;
+  max-height: 240px;
   border-radius: 200px 200px;
   background-color: black;
 }
 
 .about__logo-image {
-  width: 148px;
-  height: 114px;
+  max-width: 148px;
+  max-height: 114px;
+}
+
+.about__title {
+  padding: 100px 0;
+  font-weight: 700;
+  font-size: 40px;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  line-height: normal;
 }
 /* Footer */
 
 .footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  max-height: 97px;
-  margin: 180px 50px 90px 50px;
+  padding: 0 50px 90px 50px;
 }
 
+.footer__contacts {
+  min-width: 240px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24.3px;
+}
 .footer__menu {
   max-width: 240px;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
 }
 .footer__links-list-item {
   max-width: 149px;
@@ -266,10 +298,19 @@ li {
 }
 
 .footer__social-list {
-  max-width: 240px;
-  max-height: 48px;
-  list-style: none;
+  float: left;
+  height: 48px;
 }
+
 .footer__social-list-item {
-  display: inline;
+  display: flex;
+  justify-content: space-between;
+  min-width: 240px;
+}
+
+.youtube,
+.vk,
+.pinterest {
+  width: 100%;
+  height: 100%;
 }
