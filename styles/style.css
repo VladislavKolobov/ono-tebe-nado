@@ -1,23 +1,14 @@
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-li {
-  list-style: none;
-}
 /* Header */
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto auto;
   align-items: center;
+  gap: 49px;
   padding: 92px 49px 92px 51px;
 }
 .header__links-list {
   display: flex;
-  justify-content: space-between;
-  min-width: 388px;
-  min-height: 23px;
+  gap: 32px;
 }
 .header__links-list-item {
   font-weight: 400;
@@ -30,35 +21,37 @@ li {
   list-style: none;
 }
 
-.header__logo {
-  justify-content: center;
-  padding-right: 150px;
+.links-list-item_decoration {
+  text-decoration: none;
 }
 
 .header__logo-image {
   max-width: 148px;
   max-height: 105px;
 }
-.header__contacts {
-  min-width: 240px;
-  min-height: 97px;
+
+.address {
+  justify-self: end;
+}
+
+.contacts {
+  max-width: 240px;
   margin-top: 5px;
   margin-bottom: 7px;
+  overflow-wrap: break-word;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: 24.3px;
 }
-.header__address {
-  font-style: normal;
-}
+
 /* Overlay and Cover */
 
 .cover {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-image: url(/ono-tebe-nado/images/cover.jpg);
+  background-image: url(../images/cover.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -87,12 +80,13 @@ li {
 
 .aligned-text {
   padding: 165px 0 0 50px;
+  line-height: 115px;
   letter-spacing: 30px;
 }
 
 .aligned-text_center {
   padding: 20px 0;
-  line-height: 100%;
+  line-height: 100px;
   letter-spacing: 30px;
   text-align: center;
 }
@@ -100,7 +94,7 @@ li {
 .aligned-text_right {
   padding-right: 20px;
   padding-bottom: 135px;
-  line-height: 100%;
+  line-height: 100px;
   letter-spacing: 30px;
   text-align: right;
 }
@@ -111,7 +105,7 @@ li {
   justify-content: right;
   align-items: center;
   gap: 78px;
-  padding: 0 50px 62px 0;
+  padding: 0 50px 50px 0;
 }
 .cover__description-text {
   color: #fff;
@@ -159,25 +153,18 @@ li {
   flex-grow: 1;
   align-content: center;
   gap: 25px;
-  max-height: 100%;
 }
 
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .lots__card-list-item {
@@ -189,17 +176,18 @@ li {
 }
 
 .card {
-  position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-width: 430px;
   min-height: 450px;
   padding: 50px 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card__title {
+  z-index: 2;
   color: #fff;
   font-weight: 700;
   font-size: 22px;
@@ -210,6 +198,7 @@ li {
 }
 
 .card__text {
+  z-index: 2;
   color: #fff;
   font-weight: 400;
   font-size: 20px;
@@ -230,7 +219,6 @@ li {
 .about {
   display: grid;
   grid-template-columns: 430px auto;
-  grid-template-rows: 487px;
   justify-items: center;
   gap: 25px;
   padding: 0 50px 180px 50px;
@@ -285,32 +273,23 @@ li {
   line-height: 24.3px;
 }
 .footer__menu {
-  max-width: 240px;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
 }
 .footer__links-list-item {
-  max-width: 149px;
   text-align: center;
   list-style: none;
-}
-
-.footer__social-list {
-  float: left;
-  height: 48px;
 }
 
 .footer__social-list-item {
   display: flex;
   justify-content: space-between;
-  min-width: 240px;
+  gap: 48px;
 }
 
-.youtube,
-.vk,
-.pinterest {
+.footer__icon {
   width: 100%;
-  height: 100%;
+  max-height: 48px;
 }
