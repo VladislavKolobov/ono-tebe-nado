@@ -21,7 +21,7 @@
   list-style: none;
 }
 
-.links-list-item_decoration {
+.header__active-link {
   text-decoration: none;
 }
 
@@ -38,7 +38,6 @@
   max-width: 240px;
   margin-top: 5px;
   margin-bottom: 7px;
-  overflow-wrap: break-word;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -281,6 +280,10 @@
 .footer__links-list-item {
   text-align: center;
   list-style: none;
+}
+
+.footer__active-link {
+  text-decoration: none;
 }
 
 .footer__social-list-item {
